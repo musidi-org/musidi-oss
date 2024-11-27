@@ -1,0 +1,5 @@
+{
+  "pre-commit": "pnpm format",
+  "pre-push": "pnpm format && pnpm knip",
+  "commit-msg": "npx --no -- commitlint --edit \"$1\""
+}
