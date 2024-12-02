@@ -1,0 +1,14 @@
+{
+  "name": "piano-transcriber",
+  "private": "true",
+  "scripts": {
+    "postinstall": "poetry install; chmod +x .venv/bin/activate; source .venv/bin/activate",
+    "onnx": "poetry run python3 scripts/onnxGenerate.py",
+    "transcribe": "poetry run python3 scripts/transcribeAudio.py $1",
+    "format:write": "poetry run ruff format",
+    "build": "poetry build",
+    "test:unit": "poetry run pytest",
+    "test:snapshot": "poetry run pytest --snapshot-update",
+    "test:lint": "poetry run ruff check --fix"
+  }
+}

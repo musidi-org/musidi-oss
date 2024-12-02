@@ -1,11 +1,13 @@
 # dependencies
 node_modules
 package-lock.json
+.venv
 
 # builds
 dist
 .vinxi
 .wrangler
+__pycache__
 
 # misc
 .DS_Store
@@ -20,3 +22,8 @@ yarn-error.log*
 
 # nx
 .nx
+
+# python
+*.pth
+.ruff_cache
+.pytest_cache

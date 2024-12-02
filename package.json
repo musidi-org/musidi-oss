@@ -8,11 +8,14 @@
     "postinstall": "simple-git-hooks",
     "graph": "nx graph",
     "format": "nx affected -t format:write",
-    "build:all": "nx run-many -t build",
     "build": "nx affected -t build",
+    "test": "nx affected -t test:type test:lint test:unit",
     "test:type": "nx affected -t test:type",
     "test:lint": "nx affected -t test:lint",
-    "knip": "knip"
+    "test:unit": "nx affected -t test:unit",
+    "knip": "knip",
+    "build:all": "nx run-many -t build",
+    "test:all": "nx run-many -t test:type test:lint test:unit"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
