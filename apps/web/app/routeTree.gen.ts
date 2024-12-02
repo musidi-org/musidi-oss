@@ -197,8 +197,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutLayout2Route: LayoutLayout2RouteWithChildren,
 }
 
-const LayoutRouteWithChildren =
-  LayoutRoute._addFileChildren(LayoutRouteChildren)
+const LayoutRouteWithChildren = LayoutRoute._addFileChildren(LayoutRouteChildren)
 
 interface PostsRouteChildren {
   PostsPostIdRoute: typeof PostsPostIdRoute
