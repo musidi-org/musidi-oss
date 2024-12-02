@@ -6,7 +6,12 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks",
-    "format": "biome check --write --verbose",
+    "graph": "nx graph",
+    "format": "nx affected -t format:write",
+    "build:all": "nx run-many -t build",
+    "build": "nx affected -t build",
+    "test:type": "nx affected -t test:type",
+    "test:lint": "nx affected -t test:lint",
     "knip": "knip"
   },
   "devDependencies": {
@@ -16,6 +21,7 @@
     "@types/node": "22.10.0",
     "cz-git": "1.11.0",
     "knip": "5.38.1",
+    "nx": "20.1.3",
     "simple-git-hooks": "^2.11.1"
   }
 }
