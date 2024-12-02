@@ -3,13 +3,13 @@ import { createServerFn } from '@tanstack/start'
 import { Suspense, useState } from 'react'
 
 const personServerFn = createServerFn({ method: 'GET' })
-  .validator((d) => d as string)
+  .validator((d: any) => d as string)
   .handler(({ data: name }) => {
     return { name, randomNumber: Math.floor(Math.random() * 100) }
   })
 
 const slowServerFn = createServerFn({ method: 'GET' })
-  .validator((d) => d as string)
+  .validator((d: any) => d as string)
   .handler(async ({ data: name }) => {
     await new Promise((r) => setTimeout(r, 1000))
     return { name, randomNumber: Math.floor(Math.random() * 100) }
@@ -53,7 +53,9 @@ function Deferred() {
       </Suspense>
       <div>Count: {count}</div>
       <div>
-        <button onClick={() => setCount(count + 1)}>Increment</button>
+        <button type="button" onClick={() => setCount(count + 1)}>
+          Increment
+        </button>
       </div>
     </div>
   )

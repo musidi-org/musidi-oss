@@ -1,7 +1,16 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
   "files": {
-    "ignore": ["node_modules", ".nx", "public", "dist", ".output", ".vinxi", ".venv", ".aws-sam"],
+    "ignore": [
+      "node_modules",
+      ".nx",
+      "public",
+      "dist",
+      ".wrangler",
+      ".vinxi",
+      ".venv",
+      ".aws-sam"
+    ],
     "ignoreUnknown": true
   },
   "formatter": {
@@ -12,7 +21,16 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "suspicious": {
+        "noExplicitAny": "off"
+      },
+      "correctness": {
+        "noChildrenProp": "off"
+      },
+      "style": {
+        "noUnusedTemplateLiteral": "off"
+      }
     }
   },
   "javascript": {

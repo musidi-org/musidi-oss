@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "vinxi dev",
     "build": "vinxi build",
-    "start": "npx wrangler pages dev dist --port 3000"
+    "start": "npx wrangler pages dev dist --port 3000",
+    "format:write": "biome format --write --verbose",
+    "test:type": "tsc --noEmit",
+    "test:lint": "biome lint --write --verbose"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.85.0",
@@ -27,5 +30,11 @@
     "tailwindcss-animate": "1.0.7",
     "typescript": "^5.6.2",
     "vite-tsconfig-paths": "^5.1.3"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   }
 }
