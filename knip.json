@@ -1,5 +1,6 @@
 {
   "$schema": "https://unpkg.com/knip@5/schema.json",
-  "ignoreDependencies": ["cz-git"],
-  "ignoreBinaries": ["only-allow"]
+  "ignoreDependencies": ["cz-git", "@biomejs/biome"],
+  "ignoreBinaries": ["only-allow"],
+  "ignoreWorkspaces": ["./apps/web"]
 }
