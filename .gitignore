@@ -4,7 +4,8 @@ package-lock.json
 
 # builds
 dist
-.output
+.vinxi
+.wrangler
 
 # misc
 .DS_Store
