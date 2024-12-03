@@ -9,14 +9,20 @@ def transcribeFileSnapshot(audioFileName):
     return f.read()
 
 
-def test_transcribe(snapshot):
-    audioFiles = [
-        "example.mp3",
-        "example.webm",
-        "example.ogg",
-        "example.flac",
-        "example.m4a",
-        "example.opus",
-    ]
-    for audioFile in audioFiles:
-        assert transcribeFileSnapshot(audioFile) == snapshot
+def test_transcribe_mp3(snapshot):
+    assert transcribeFileSnapshot("example.mp3") == snapshot
+
+def test_transcribe_webm(snapshot):
+    assert transcribeFileSnapshot("example.webm") == snapshot
+
+def test_transcribe_ogg(snapshot):
+    assert transcribeFileSnapshot("example.ogg") == snapshot
+
+def test_transcribe_flac(snapshot):
+    assert transcribeFileSnapshot( "example.flac") == snapshot
+
+def test_transcribe_m4a(snapshot):
+    assert transcribeFileSnapshot("example.m4a") == snapshot
+
+def test_transcribe_opus(snapshot):
+    assert transcribeFileSnapshot("example.opus") == snapshot
