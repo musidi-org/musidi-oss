@@ -6,7 +6,8 @@
     "dev": "vinxi dev",
     "build": "vinxi build",
     "start": "npx wrangler pages dev dist --port 3000",
-    "format:write": "biome format --write --verbose",
+    "format": "biome format --write --verbose",
+    "test": "pnpm '/^test:.*/'",
     "test:type": "tsc --noEmit",
     "test:lint": "biome lint --write --verbose"
   },
