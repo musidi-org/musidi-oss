@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "clean": "rimraf -rf .vinxi .wrangler dist node_modules",
     "dev": "vinxi dev",
     "build": "vinxi build",
     "start": "npx wrangler pages dev dist --port 3000",
