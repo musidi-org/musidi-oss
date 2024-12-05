@@ -10,13 +10,14 @@
     "graph": "nx graph",
     "format": "pnpm -r format",
     "build": "nx affected -t build",
-    "test": "nx affected -t test:type test:lint test:unit",
+    "test": "nx affected -t test:build test:type test:lint test:unit",
+    "test:build": "nx affected -t test:build",
     "test:type": "nx affected -t test:type",
     "test:lint": "nx affected -t test:lint",
     "test:unit": "nx affected -t test:unit",
     "knip": "knip",
     "build:all": "pnpm -r build",
-    "test:all": "nx run-many -t test:type test:lint test:unit"
+    "test:all": "nx run-many -t test:build test:type test:lint test:unit"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "0.17.0",
