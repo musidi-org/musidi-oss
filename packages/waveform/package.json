@@ -8,10 +8,10 @@
   "scripts": {
     "clean": "rimraf -rf dist node_modules",
     "build": "tsup src/index.ts --format cjs,esm --dts --clean --sourcemap",
-    "format": "biome format --write --verbose",
+    "format": "pnpm biome format --write --verbose",
     "test": "pnpm '/^test:.*/'",
     "test:build": "attw -P .",
-    "test:type": "tsc --noEmit",
-    "test:lint": "biome lint --write --verbose"
+    "test:type": "pnpm tsc --noEmit",
+    "test:lint": "pnpm biome lint --write --verbose"
   }
 }
