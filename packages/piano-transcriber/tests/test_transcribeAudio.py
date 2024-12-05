@@ -1,3 +1,4 @@
+import mido
 from scripts import transcribeAudio
 
 
@@ -5,8 +6,7 @@ def transcribeFileSnapshot(audioFileName):
     audioFilePath = f"samples/{audioFileName}"
     midiFilePath = f"{audioFilePath}.mid"
     transcribeAudio.transcribeFile(audioFilePath)
-    f = open(midiFilePath, "rb")
-    return f.read()
+    return mido.MidiFile(midiFilePath)
 
 
 def test_transcribe_mp3(snapshot):

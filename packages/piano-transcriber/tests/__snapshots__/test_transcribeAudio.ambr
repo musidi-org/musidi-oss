@@ -1,19 +1,217 @@
 # serializer version: 1
 # name: test_transcribe_flac
-  b'MThd\x00\x00\x00\x06\x00\x01\x00\x02\x01\x80MTrk\x00\x00\x00\x13\x00\xffQ\x03\x07\xa1 \x00\xffX\x04\x04\x02\x18\x08\x01\xff/\x00MTrk\x00\x00\x00V0\x909K\x00<K\x015J\x012C!9\x00\x025\x00\x01<\x00\x082\x00\x81.5D\x00+?\x027D\x02;H#+\x00\x037\x00\x005\x00\x1e;\x00\x81\x1f4B\x01<E\x000C\x007D#7\x00\x000\x00\x024\x00\x03<\x00\x81<$:($\x00\x01\xff/\x00'
+  MidiFile(type=1, ticks_per_beat=384, tracks=[
+    MidiTrack([
+      MetaMessage('set_tempo', tempo=500000, time=0),
+      MetaMessage('time_signature', numerator=4, denominator=4, clocks_per_click=24, notated_32nd_notes_per_beat=8, time=0),
+      MetaMessage('end_of_track', time=1)]),
+    MidiTrack([
+      Message('note_on', channel=0, note=57, velocity=75, time=48),
+      Message('note_on', channel=0, note=60, velocity=75, time=0),
+      Message('note_on', channel=0, note=53, velocity=74, time=1),
+      Message('note_on', channel=0, note=50, velocity=67, time=1),
+      Message('note_on', channel=0, note=57, velocity=0, time=33),
+      Message('note_on', channel=0, note=53, velocity=0, time=2),
+      Message('note_on', channel=0, note=60, velocity=0, time=1),
+      Message('note_on', channel=0, note=50, velocity=0, time=8),
+      Message('note_on', channel=0, note=53, velocity=68, time=174),
+      Message('note_on', channel=0, note=43, velocity=63, time=0),
+      Message('note_on', channel=0, note=55, velocity=68, time=2),
+      Message('note_on', channel=0, note=59, velocity=72, time=2),
+      Message('note_on', channel=0, note=43, velocity=0, time=35),
+      Message('note_on', channel=0, note=55, velocity=0, time=3),
+      Message('note_on', channel=0, note=53, velocity=0, time=0),
+      Message('note_on', channel=0, note=59, velocity=0, time=30),
+      Message('note_on', channel=0, note=52, velocity=66, time=159),
+      Message('note_on', channel=0, note=60, velocity=69, time=1),
+      Message('note_on', channel=0, note=48, velocity=67, time=0),
+      Message('note_on', channel=0, note=55, velocity=68, time=0),
+      Message('note_on', channel=0, note=55, velocity=0, time=35),
+      Message('note_on', channel=0, note=48, velocity=0, time=0),
+      Message('note_on', channel=0, note=52, velocity=0, time=2),
+      Message('note_on', channel=0, note=60, velocity=0, time=3),
+      Message('note_on', channel=0, note=36, velocity=58, time=188),
+      Message('note_on', channel=0, note=36, velocity=0, time=40),
+      MetaMessage('end_of_track', time=1)])
+  ])
 # ---
 # name: test_transcribe_m4a
-  b'MThd\x00\x00\x00\x06\x00\x01\x00\x02\x01\x80MTrk\x00\x00\x00\x13\x00\xffQ\x03\x07\xa1 \x00\xffX\x04\x04\x02\x18\x08\x01\xff/\x00MTrk\x00\x00\x00V0\x909L\x015I\x00<J\x012B!9\x00\x035\x00\x00<\x00\x072\x00\x81/+?\x015B\x037C\x02;H +\x00"5\x00\x007\x00\x00;\x00\x81\x1f4A\x000B\x01<D\x007D"0\x00\x017\x00\x034\x00\x02<\x00\x81<$:\'$\x00\x01\xff/\x00'
+  MidiFile(type=1, ticks_per_beat=384, tracks=[
+    MidiTrack([
+      MetaMessage('set_tempo', tempo=500000, time=0),
+      MetaMessage('time_signature', numerator=4, denominator=4, clocks_per_click=24, notated_32nd_notes_per_beat=8, time=0),
+      MetaMessage('end_of_track', time=1)]),
+    MidiTrack([
+      Message('note_on', channel=0, note=57, velocity=76, time=48),
+      Message('note_on', channel=0, note=53, velocity=73, time=1),
+      Message('note_on', channel=0, note=60, velocity=74, time=0),
+      Message('note_on', channel=0, note=50, velocity=66, time=1),
+      Message('note_on', channel=0, note=57, velocity=0, time=33),
+      Message('note_on', channel=0, note=53, velocity=0, time=3),
+      Message('note_on', channel=0, note=60, velocity=0, time=0),
+      Message('note_on', channel=0, note=50, velocity=0, time=7),
+      Message('note_on', channel=0, note=43, velocity=63, time=175),
+      Message('note_on', channel=0, note=53, velocity=66, time=1),
+      Message('note_on', channel=0, note=55, velocity=67, time=3),
+      Message('note_on', channel=0, note=59, velocity=72, time=2),
+      Message('note_on', channel=0, note=43, velocity=0, time=32),
+      Message('note_on', channel=0, note=53, velocity=0, time=34),
+      Message('note_on', channel=0, note=55, velocity=0, time=0),
+      Message('note_on', channel=0, note=59, velocity=0, time=0),
+      Message('note_on', channel=0, note=52, velocity=65, time=159),
+      Message('note_on', channel=0, note=48, velocity=66, time=0),
+      Message('note_on', channel=0, note=60, velocity=68, time=1),
+      Message('note_on', channel=0, note=55, velocity=68, time=0),
+      Message('note_on', channel=0, note=48, velocity=0, time=34),
+      Message('note_on', channel=0, note=55, velocity=0, time=1),
+      Message('note_on', channel=0, note=52, velocity=0, time=3),
+      Message('note_on', channel=0, note=60, velocity=0, time=2),
+      Message('note_on', channel=0, note=36, velocity=58, time=188),
+      Message('note_on', channel=0, note=36, velocity=0, time=39),
+      MetaMessage('end_of_track', time=1)])
+  ])
 # ---
 # name: test_transcribe_mp3
-  b'MThd\x00\x00\x00\x06\x00\x01\x00\x02\x01\x80MTrk\x00\x00\x00\x13\x00\xffQ\x03\x07\xa1 \x00\xffX\x04\x04\x02\x18\x08\x01\xff/\x00MTrk\x00\x00\x00V0\x909K\x005I\x00<K\x022B!9\x00\x025\x00\x00<\x00\x062\x00\x811+A\x005C\x027C\x01;G$+\x00\x027\x00\x015\x00\x1e;\x00\x81\x1f4A\x010C\x00<E\x007D$7\x00\x000\x00\x024\x00\x02<\x00\x81<$9)$\x00\x01\xff/\x00'
+  MidiFile(type=1, ticks_per_beat=384, tracks=[
+    MidiTrack([
+      MetaMessage('set_tempo', tempo=500000, time=0),
+      MetaMessage('time_signature', numerator=4, denominator=4, clocks_per_click=24, notated_32nd_notes_per_beat=8, time=0),
+      MetaMessage('end_of_track', time=1)]),
+    MidiTrack([
+      Message('note_on', channel=0, note=57, velocity=75, time=48),
+      Message('note_on', channel=0, note=53, velocity=73, time=0),
+      Message('note_on', channel=0, note=60, velocity=75, time=0),
+      Message('note_on', channel=0, note=50, velocity=66, time=2),
+      Message('note_on', channel=0, note=57, velocity=0, time=33),
+      Message('note_on', channel=0, note=53, velocity=0, time=2),
+      Message('note_on', channel=0, note=60, velocity=0, time=0),
+      Message('note_on', channel=0, note=50, velocity=0, time=6),
+      Message('note_on', channel=0, note=43, velocity=65, time=177),
+      Message('note_on', channel=0, note=53, velocity=67, time=0),
+      Message('note_on', channel=0, note=55, velocity=67, time=2),
+      Message('note_on', channel=0, note=59, velocity=71, time=1),
+      Message('note_on', channel=0, note=43, velocity=0, time=36),
+      Message('note_on', channel=0, note=55, velocity=0, time=2),
+      Message('note_on', channel=0, note=53, velocity=0, time=1),
+      Message('note_on', channel=0, note=59, velocity=0, time=30),
+      Message('note_on', channel=0, note=52, velocity=65, time=159),
+      Message('note_on', channel=0, note=48, velocity=67, time=1),
+      Message('note_on', channel=0, note=60, velocity=69, time=0),
+      Message('note_on', channel=0, note=55, velocity=68, time=0),
+      Message('note_on', channel=0, note=55, velocity=0, time=36),
+      Message('note_on', channel=0, note=48, velocity=0, time=0),
+      Message('note_on', channel=0, note=52, velocity=0, time=2),
+      Message('note_on', channel=0, note=60, velocity=0, time=2),
+      Message('note_on', channel=0, note=36, velocity=57, time=188),
+      Message('note_on', channel=0, note=36, velocity=0, time=41),
+      MetaMessage('end_of_track', time=1)])
+  ])
 # ---
 # name: test_transcribe_ogg
-  b'MThd\x00\x00\x00\x06\x00\x01\x00\x02\x01\x80MTrk\x00\x00\x00\x13\x00\xffQ\x03\x07\xa1 \x00\xffX\x04\x04\x02\x18\x08\x01\xff/\x00MTrk\x00\x00\x00V0\x909J\x01<J\x005F\x012B!9\x00\x015\x00\x01<\x00\x082\x00\x81.+A\x015D\x027D\x01;H&+\x00\x035\x00\x01;\x00\x1b7\x00\x81\x1f4C\x01<F\x000C\x007E$0\x00\x027\x00\x024\x00\x01<\x00\x81<$:)$\x00\x01\xff/\x00'
+  MidiFile(type=1, ticks_per_beat=384, tracks=[
+    MidiTrack([
+      MetaMessage('set_tempo', tempo=500000, time=0),
+      MetaMessage('time_signature', numerator=4, denominator=4, clocks_per_click=24, notated_32nd_notes_per_beat=8, time=0),
+      MetaMessage('end_of_track', time=1)]),
+    MidiTrack([
+      Message('note_on', channel=0, note=57, velocity=74, time=48),
+      Message('note_on', channel=0, note=60, velocity=74, time=1),
+      Message('note_on', channel=0, note=53, velocity=70, time=0),
+      Message('note_on', channel=0, note=50, velocity=66, time=1),
+      Message('note_on', channel=0, note=57, velocity=0, time=33),
+      Message('note_on', channel=0, note=53, velocity=0, time=1),
+      Message('note_on', channel=0, note=60, velocity=0, time=1),
+      Message('note_on', channel=0, note=50, velocity=0, time=8),
+      Message('note_on', channel=0, note=43, velocity=65, time=174),
+      Message('note_on', channel=0, note=53, velocity=68, time=1),
+      Message('note_on', channel=0, note=55, velocity=68, time=2),
+      Message('note_on', channel=0, note=59, velocity=72, time=1),
+      Message('note_on', channel=0, note=43, velocity=0, time=38),
+      Message('note_on', channel=0, note=53, velocity=0, time=3),
+      Message('note_on', channel=0, note=59, velocity=0, time=1),
+      Message('note_on', channel=0, note=55, velocity=0, time=27),
+      Message('note_on', channel=0, note=52, velocity=67, time=159),
+      Message('note_on', channel=0, note=60, velocity=70, time=1),
+      Message('note_on', channel=0, note=48, velocity=67, time=0),
+      Message('note_on', channel=0, note=55, velocity=69, time=0),
+      Message('note_on', channel=0, note=48, velocity=0, time=36),
+      Message('note_on', channel=0, note=55, velocity=0, time=2),
+      Message('note_on', channel=0, note=52, velocity=0, time=2),
+      Message('note_on', channel=0, note=60, velocity=0, time=1),
+      Message('note_on', channel=0, note=36, velocity=58, time=188),
+      Message('note_on', channel=0, note=36, velocity=0, time=41),
+      MetaMessage('end_of_track', time=1)])
+  ])
 # ---
 # name: test_transcribe_opus
-  b'MThd\x00\x00\x00\x06\x00\x01\x00\x02\x01\x80MTrk\x00\x00\x00\x13\x00\xffQ\x03\x07\xa1 \x00\xffX\x04\x04\x02\x18\x08\x01\xff/\x00MTrk\x00\x00\x00V0\x909K\x005J\x01<J\x002C$9\x00\x025\x00\x01<\x00\x042\x00\x81/+@\x015D\x027D\x01;H!+\x00\x065\x00\x017\x00\x1d;\x00\x81\x1f4B\x010B\x00<E\x007D&7\x00\x000\x00\x014\x00\x01<\x00\x81<$:*$\x00\x01\xff/\x00'
+  MidiFile(type=1, ticks_per_beat=384, tracks=[
+    MidiTrack([
+      MetaMessage('set_tempo', tempo=500000, time=0),
+      MetaMessage('time_signature', numerator=4, denominator=4, clocks_per_click=24, notated_32nd_notes_per_beat=8, time=0),
+      MetaMessage('end_of_track', time=1)]),
+    MidiTrack([
+      Message('note_on', channel=0, note=57, velocity=75, time=48),
+      Message('note_on', channel=0, note=53, velocity=74, time=0),
+      Message('note_on', channel=0, note=60, velocity=74, time=1),
+      Message('note_on', channel=0, note=50, velocity=67, time=0),
+      Message('note_on', channel=0, note=57, velocity=0, time=36),
+      Message('note_on', channel=0, note=53, velocity=0, time=2),
+      Message('note_on', channel=0, note=60, velocity=0, time=1),
+      Message('note_on', channel=0, note=50, velocity=0, time=4),
+      Message('note_on', channel=0, note=43, velocity=64, time=175),
+      Message('note_on', channel=0, note=53, velocity=68, time=1),
+      Message('note_on', channel=0, note=55, velocity=68, time=2),
+      Message('note_on', channel=0, note=59, velocity=72, time=1),
+      Message('note_on', channel=0, note=43, velocity=0, time=33),
+      Message('note_on', channel=0, note=53, velocity=0, time=6),
+      Message('note_on', channel=0, note=55, velocity=0, time=1),
+      Message('note_on', channel=0, note=59, velocity=0, time=29),
+      Message('note_on', channel=0, note=52, velocity=66, time=159),
+      Message('note_on', channel=0, note=48, velocity=66, time=1),
+      Message('note_on', channel=0, note=60, velocity=69, time=0),
+      Message('note_on', channel=0, note=55, velocity=68, time=0),
+      Message('note_on', channel=0, note=55, velocity=0, time=38),
+      Message('note_on', channel=0, note=48, velocity=0, time=0),
+      Message('note_on', channel=0, note=52, velocity=0, time=1),
+      Message('note_on', channel=0, note=60, velocity=0, time=1),
+      Message('note_on', channel=0, note=36, velocity=58, time=188),
+      Message('note_on', channel=0, note=36, velocity=0, time=42),
+      MetaMessage('end_of_track', time=1)])
+  ])
 # ---
 # name: test_transcribe_webm
-  b'MThd\x00\x00\x00\x06\x00\x01\x00\x02\x01\x80MTrk\x00\x00\x00\x13\x00\xffQ\x03\x07\xa1 \x00\xffX\x04\x04\x02\x18\x08\x01\xff/\x00MTrk\x00\x00\x00V0\x909K\x005J\x01<J\x002C$9\x00\x025\x00\x01<\x00\x042\x00\x81/+@\x015D\x027D\x01;H!+\x00\x065\x00\x017\x00\x1d;\x00\x81\x1f4B\x010B\x00<E\x007D&7\x00\x000\x00\x014\x00\x01<\x00\x81<$:*$\x00\x01\xff/\x00'
+  MidiFile(type=1, ticks_per_beat=384, tracks=[
+    MidiTrack([
+      MetaMessage('set_tempo', tempo=500000, time=0),
+      MetaMessage('time_signature', numerator=4, denominator=4, clocks_per_click=24, notated_32nd_notes_per_beat=8, time=0),
+      MetaMessage('end_of_track', time=1)]),
+    MidiTrack([
+      Message('note_on', channel=0, note=57, velocity=75, time=48),
+      Message('note_on', channel=0, note=53, velocity=74, time=0),
+      Message('note_on', channel=0, note=60, velocity=74, time=1),
+      Message('note_on', channel=0, note=50, velocity=67, time=0),
+      Message('note_on', channel=0, note=57, velocity=0, time=36),
+      Message('note_on', channel=0, note=53, velocity=0, time=2),
+      Message('note_on', channel=0, note=60, velocity=0, time=1),
+      Message('note_on', channel=0, note=50, velocity=0, time=4),
+      Message('note_on', channel=0, note=43, velocity=64, time=175),
+      Message('note_on', channel=0, note=53, velocity=68, time=1),
+      Message('note_on', channel=0, note=55, velocity=68, time=2),
+      Message('note_on', channel=0, note=59, velocity=72, time=1),
+      Message('note_on', channel=0, note=43, velocity=0, time=33),
+      Message('note_on', channel=0, note=53, velocity=0, time=6),
+      Message('note_on', channel=0, note=55, velocity=0, time=1),
+      Message('note_on', channel=0, note=59, velocity=0, time=29),
+      Message('note_on', channel=0, note=52, velocity=66, time=159),
+      Message('note_on', channel=0, note=48, velocity=66, time=1),
+      Message('note_on', channel=0, note=60, velocity=69, time=0),
+      Message('note_on', channel=0, note=55, velocity=68, time=0),
+      Message('note_on', channel=0, note=55, velocity=0, time=38),
+      Message('note_on', channel=0, note=48, velocity=0, time=0),
+      Message('note_on', channel=0, note=52, velocity=0, time=1),
+      Message('note_on', channel=0, note=60, velocity=0, time=1),
+      Message('note_on', channel=0, note=36, velocity=58, time=188),
+      Message('note_on', channel=0, note=36, velocity=0, time=42),
+      MetaMessage('end_of_track', time=1)])
+  ])
 # ---
