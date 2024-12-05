@@ -31,6 +31,11 @@ jobs:
         with:
           version: latest
 
+      - name: Setup ffmpeg
+        uses: FedericoCarboni/setup-ffmpeg@v3
+        with:
+          ffmpeg-version: release
+
       - name: Get base and head commits for `nx affected`
         uses: nrwl/nx-set-shas@v4.1.2
         with:
