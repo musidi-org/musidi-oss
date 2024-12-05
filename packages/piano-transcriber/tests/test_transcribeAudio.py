@@ -8,7 +8,7 @@ def transcribeFileSnapshot(audioFileName):
     transcribeAudio.transcribeFile(audioFilePath)
     mid = mido.MidiFile(midiFilePath)
     return {
-        "noteTrackLength": len(mid.tracks[1]),
+        "numTrack": len(mid.tracks),
         "tempoTrack": mid.tracks[0],
         "ticks_per_beat": mid.ticks_per_beat,
     }
