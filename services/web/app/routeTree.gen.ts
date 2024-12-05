@@ -11,20 +11,20 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as RedirectImport } from './routes/redirect'
 import { Route as IndexImport } from './routes/index'
+import { Route as AppTranscribeImport } from './routes/app/transcribe'
 
 // Create/Update Routes
-
-const RedirectRoute = RedirectImport.update({
-  id: '/redirect',
-  path: '/redirect',
-  getParentRoute: () => rootRoute,
-} as any)
 
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const AppTranscribeRoute = AppTranscribeImport.update({
+  id: '/app/transcribe',
+  path: '/app/transcribe',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -39,11 +39,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/redirect': {
-      id: '/redirect'
-      path: '/redirect'
-      fullPath: '/redirect'
-      preLoaderRoute: typeof RedirectImport
+    '/app/transcribe': {
+      id: '/app/transcribe'
+      path: '/app/transcribe'
+      fullPath: '/app/transcribe'
+      preLoaderRoute: typeof AppTranscribeImport
       parentRoute: typeof rootRoute
     }
   }
@@ -53,37 +53,37 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/redirect': typeof RedirectRoute
+  '/app/transcribe': typeof AppTranscribeRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/redirect': typeof RedirectRoute
+  '/app/transcribe': typeof AppTranscribeRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/redirect': typeof RedirectRoute
+  '/app/transcribe': typeof AppTranscribeRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/redirect'
+  fullPaths: '/' | '/app/transcribe'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/redirect'
-  id: '__root__' | '/' | '/redirect'
+  to: '/' | '/app/transcribe'
+  id: '__root__' | '/' | '/app/transcribe'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  RedirectRoute: typeof RedirectRoute
+  AppTranscribeRoute: typeof AppTranscribeRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  RedirectRoute: RedirectRoute,
+  AppTranscribeRoute: AppTranscribeRoute,
 }
 
 export const routeTree = rootRoute
@@ -97,14 +97,14 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/redirect"
+        "/app/transcribe"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
-    "/redirect": {
-      "filePath": "redirect.tsx"
+    "/app/transcribe": {
+      "filePath": "app/transcribe.tsx"
     }
   }
 }

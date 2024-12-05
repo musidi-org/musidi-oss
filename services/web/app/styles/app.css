@@ -47,8 +47,7 @@
     --radius: 0.5rem;
   }
 
-  .dark,
-  [data-kb-theme="dark"] {
+  .dark {
     --background: 0 0% 0%;
     --foreground: 0 0% 80%;
 
@@ -99,11 +98,6 @@
   }
 
   .contain {
-    @apply max-w-screen-xl px-4 mx-auto w-full;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    @apply max-w-screen-xl px-3 mx-auto w-full;
   }
 }
