@@ -31,8 +31,10 @@ jobs:
         with:
           version: latest
 
-      - name: Fetch main for Nx comparison
-        run: git fetch origin main
+      - name: Get base and head commits for `nx affected`
+        uses: nrwl/nx-set-shas@v4.1.2
+        with:
+          main-branch-name: main
 
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
