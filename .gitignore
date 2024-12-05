@@ -27,3 +27,6 @@ yarn-error.log*
 *.pth
 .ruff_cache
 .pytest_cache
+
+
+storybook-static

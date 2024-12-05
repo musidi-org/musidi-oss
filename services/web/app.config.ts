@@ -11,6 +11,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
+      // @ts-expect-error vite types in vinxi
       tsConfigPaths({
         projects: ['./tsconfig.json'],
       }),

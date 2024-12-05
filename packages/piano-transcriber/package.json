@@ -1,5 +1,5 @@
 {
-  "name": "piano-transcriber",
+  "name": "@musidi/piano-transcriber",
   "private": "true",
   "scripts": {
     "postinstall": "poetry install",
