@@ -1,0 +1,51 @@
+{
+  "name": "Musidi",
+  "short_name": "Musidi",
+  "description": "Musidi is the fastest piano transciption web app.",
+  "lang": "en",
+  "categories": ["music", "education", "piano", "audio"],
+  "display": "standalone",
+  "orientation": "portrait",
+  "display_override": [
+    "standalone",
+    "minimal-ui",
+    "browser",
+    "fullscreen",
+    "window-controls-overlay"
+  ],
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "id": "www.musidi.org",
+  "start_url": "/",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "/screenshots/Musidi 1 -  iPhone 12 Pro.png",
+      "sizes": "1170x2532",
+      "purpose": "any",
+      "type": "png"
+    },
+    {
+      "src": "/screenshots/Musidi 2 -  iPhone 12 Pro.png",
+      "sizes": "1170x2532",
+      "purpose": "any",
+      "type": "png"
+    },
+    {
+      "src": "/screenshots/Musidi 3 -  iPhone 12 Pro.png",
+      "sizes": "1170x2532",
+      "purpose": "any",
+      "type": "png"
+    },
+    {
+      "src": "/screenshots/Musidi 4 -  iPhone 12 Pro.png",
+      "sizes": "1170x2532",
+      "purpose": "any",
+      "type": "png"
+    }
+  ],
+  "icons": [
+    { "src": "favicon.svg", "sizes": "48x48", "type": "image/svg", "purpose": "any" },
+    { "src": "favicon.webp", "sizes": "144x144", "type": "image/webp", "purpose": "any" }
+  ]
+}
