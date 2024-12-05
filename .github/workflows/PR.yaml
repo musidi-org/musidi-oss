@@ -29,13 +29,13 @@ jobs:
       - name: Setup poetry
         uses: snok/install-poetry@v1
         with:
-          poetry-version: latest
+          version: latest
 
       - name: Fetch main for Nx comparison
         run: git fetch origin main
 
       - name: Install dependencies
-      - run: pnpm i
+        run: pnpm i --frozen-lockfile
 
       - name: Run affected tests
         run: pnpm test
