@@ -1,13 +1,12 @@
 import { Link, Outlet, ScrollRestoration, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/router-devtools'
 import { Meta, Scripts } from '@tanstack/start'
 import { cva } from 'class-variance-authority'
 import { Menu, Moon, Sun } from 'lucide-react'
+import { Suspense, lazy } from 'react'
 import { DefaultCatchBoundary } from '~/components/DefaultCatchBoundary'
 import { NotFound } from '~/components/NotFound'
 import { Favicon } from '~/components/icon/Favicon'
 import { ThemeProvider, useTheme } from '~/components/theme-provider'
-import { Button } from '~/components/ui/button'
 import { NavigationMenu, NavigationMenuList } from '~/components/ui/navigation-menu'
 import {
   Sheet,
@@ -56,16 +55,27 @@ export const Route = createRootRoute({
           <Outlet />
         </ThemeProvider>
         <ScrollRestoration />
-        <TanStackRouterDevtools position="bottom-right" />
+        <Suspense>
+          <TanStackRouterDevtoolsPanel position="bottom-right" />
+        </Suspense>
         <Scripts />
       </body>
     </html>
   ),
 })
 
+const TanStackRouterDevtoolsPanel =
+  import.meta.env.VITE_ENV === 'prod'
+    ? () => null // Render nothing in production
+    : lazy(() =>
+        import('@tanstack/router-devtools').then((res) => ({
+          default: res.TanStackRouterDevtools,
+        })),
+      )
+
 const Nav = () => {
   return (
-    <nav className="z-50 sticky top-0 bg-background border-b">
+    <nav className="z-50 sticky top-0 bg-background">
       <div className="mx-auto flex justify-between items-center contain p-3 gap-3">
         <HomeLink />
         <div className="items-center flex">

@@ -12,6 +12,8 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
+import { Route as LegalTermsImport } from './routes/legal/terms'
+import { Route as LegalPrivacyImport } from './routes/legal/privacy'
 import { Route as AppTranscribeImport } from './routes/app/transcribe'
 
 // Create/Update Routes
@@ -19,6 +21,18 @@ import { Route as AppTranscribeImport } from './routes/app/transcribe'
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const LegalTermsRoute = LegalTermsImport.update({
+  id: '/legal/terms',
+  path: '/legal/terms',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const LegalPrivacyRoute = LegalPrivacyImport.update({
+  id: '/legal/privacy',
+  path: '/legal/privacy',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -46,6 +60,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppTranscribeImport
       parentRoute: typeof rootRoute
     }
+    '/legal/privacy': {
+      id: '/legal/privacy'
+      path: '/legal/privacy'
+      fullPath: '/legal/privacy'
+      preLoaderRoute: typeof LegalPrivacyImport
+      parentRoute: typeof rootRoute
+    }
+    '/legal/terms': {
+      id: '/legal/terms'
+      path: '/legal/terms'
+      fullPath: '/legal/terms'
+      preLoaderRoute: typeof LegalTermsImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -54,36 +82,46 @@ declare module '@tanstack/react-router' {
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/app/transcribe': typeof AppTranscribeRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/legal/terms': typeof LegalTermsRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/app/transcribe': typeof AppTranscribeRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/legal/terms': typeof LegalTermsRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/app/transcribe': typeof AppTranscribeRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/legal/terms': typeof LegalTermsRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/app/transcribe'
+  fullPaths: '/' | '/app/transcribe' | '/legal/privacy' | '/legal/terms'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/app/transcribe'
-  id: '__root__' | '/' | '/app/transcribe'
+  to: '/' | '/app/transcribe' | '/legal/privacy' | '/legal/terms'
+  id: '__root__' | '/' | '/app/transcribe' | '/legal/privacy' | '/legal/terms'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppTranscribeRoute: typeof AppTranscribeRoute
+  LegalPrivacyRoute: typeof LegalPrivacyRoute
+  LegalTermsRoute: typeof LegalTermsRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppTranscribeRoute: AppTranscribeRoute,
+  LegalPrivacyRoute: LegalPrivacyRoute,
+  LegalTermsRoute: LegalTermsRoute,
 }
 
 export const routeTree = rootRoute
@@ -97,7 +135,9 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/app/transcribe"
+        "/app/transcribe",
+        "/legal/privacy",
+        "/legal/terms"
       ]
     },
     "/": {
@@ -105,6 +145,12 @@ export const routeTree = rootRoute
     },
     "/app/transcribe": {
       "filePath": "app/transcribe.tsx"
+    },
+    "/legal/privacy": {
+      "filePath": "legal/privacy.tsx"
+    },
+    "/legal/terms": {
+      "filePath": "legal/terms.tsx"
     }
   }
 }
