@@ -45,7 +45,7 @@ jobs:
         id: cache-poetry
         uses: actions/cache@v4
         with:
-          path: '**/.venv'
+          path: /home/runner/.cache/pypoetry
           key: cache-poetry
 
       - name: Install dependencies
