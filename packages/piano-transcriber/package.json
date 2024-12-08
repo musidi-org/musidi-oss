@@ -2,7 +2,7 @@
   "name": "@musidi/piano-transcriber",
   "private": "true",
   "scripts": {
-    "postinstall": "poetry install",
+    "poetry": "poetry install",
     "clean": "rimraf -rf */__pycache__ .venv .ruff_cache .pytest_cache",
     "onnx": "poetry run python3 scripts/onnxGenerate.py",
     "transcribe": "poetry run python3 scripts/transcribeAudio.py $1",

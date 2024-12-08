@@ -4,6 +4,8 @@
   "packageManager": "pnpm@9.12.3",
   "type": "module",
   "scripts": {
+    "poetry": "nx affected -t poetry",
+    "poetry:all": "nx run-many -t poetry",
     "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks",
     "clean": "pnpm -r clean && rimraf node_modules .nx",
