@@ -1,0 +1,17 @@
+{
+  "name": "@musidi/waveform",
+  "version": "0.0.1",
+  "private": "true",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "clean": "rimraf -rf dist node_modules",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean --sourcemap",
+    "format": "pnpm biome format --write --verbose",
+    "test": "pnpm '/^test:.*/'",
+    "test:build": "attw -P .",
+    "test:type": "pnpm tsc --noEmit",
+    "test:lint": "pnpm biome lint --write --verbose"
+  }
+}

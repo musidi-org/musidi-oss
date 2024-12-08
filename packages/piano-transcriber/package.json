@@ -1,0 +1,16 @@
+{
+  "name": "@musidi/piano-transcriber",
+  "private": "true",
+  "scripts": {
+    "poetry": "poetry install",
+    "clean": "rimraf -rf */__pycache__ .venv .ruff_cache .pytest_cache",
+    "onnx": "poetry run python3 scripts/onnxGenerate.py",
+    "transcribe": "poetry run python3 scripts/transcribeAudio.py $1",
+    "format": "poetry run ruff format",
+    "build": "poetry build",
+    "snapshot": "poetry run pytest --snapshot-update",
+    "test": "pnpm '/^test:.*/'",
+    "test:unit": "poetry run pytest -v",
+    "test:lint": "poetry run ruff check --fix -v"
+  }
+}

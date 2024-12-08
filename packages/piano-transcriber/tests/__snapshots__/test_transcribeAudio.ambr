@@ -1,0 +1,12 @@
+# serializer version: 1
+# name: test_transcribe_mp3
+  dict({
+    'numTrack': 2,
+    'tempoTrack': MidiTrack([
+      MetaMessage('set_tempo', tempo=500000, time=0),
+      MetaMessage('time_signature', numerator=4, denominator=4, clocks_per_click=24, notated_32nd_notes_per_beat=8, time=0),
+      MetaMessage('end_of_track', time=1),
+    ]),
+    'ticks_per_beat': 384,
+  })
+# ---
