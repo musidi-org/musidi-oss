@@ -41,6 +41,13 @@ jobs:
         with:
           main-branch-name: main
 
+      - name: Cache poetry dependencies
+        id: cache-poetry
+        uses: actions/cache@v4
+        with:
+          path: '**/.venv'
+          key: cache-poetry
+
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
 
