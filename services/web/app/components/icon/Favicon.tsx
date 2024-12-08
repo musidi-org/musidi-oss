@@ -1,4 +1,4 @@
-import type { JSX } from 'React'
+import type { JSX } from 'react'
 
 export function Favicon(props: JSX.IntrinsicElements['svg']) {
   return (
